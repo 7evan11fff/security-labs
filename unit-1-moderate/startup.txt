@@ -1,0 +1,27 @@
+UNIT 1: RECONNAISSANCE CHALLENGE — MODERATE
+============================================
+
+TARGET: ShipStack - Cloud Deployment Platform
+OBJECTIVE: Find the hidden flag through API reconnaissance.
+
+CREDENTIALS:
+  Email: developer@shipstack.io
+  Password: ship2025
+
+GETTING STARTED:
+  1. Visit the application and log in with the credentials above.
+  2. Explore the application and its API surface.
+  3. Use curl or DevTools to inspect API responses — pay close attention to response headers.
+  4. Web applications often have documentation, status pages, and configuration endpoints
+     that aren't linked from the UI but are still accessible.
+  5. Think about what files and paths web servers commonly expose.
+
+TOOLS YOU MAY NEED:
+  - Browser Developer Tools (Network tab, Response headers)
+  - curl (especially with -v flag to see headers)
+  - Knowledge of common API documentation paths
+  - Understanding of robots.txt and its purpose
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

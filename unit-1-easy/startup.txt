@@ -1,0 +1,24 @@
+UNIT 1: RECONNAISSANCE CHALLENGE — EASY
+========================================
+
+TARGET: DevPulse - Developer Analytics Platform
+OBJECTIVE: Find the hidden flag through API reconnaissance.
+
+CREDENTIALS:
+  Email: dev@devpulse.io
+  Password: demo1234
+
+GETTING STARTED:
+  1. Visit the application and log in with the credentials above.
+  2. Explore the application. Pay attention to how it communicates with its backend.
+  3. Use your browser's Developer Tools (Network tab) or curl to inspect API requests and responses.
+  4. Look for clues in HTTP response headers, common file paths, and API documentation.
+
+TOOLS YOU MAY NEED:
+  - Browser Developer Tools (Network tab, Response headers)
+  - curl
+  - Common sense about where web applications store documentation
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

@@ -1,0 +1,31 @@
+UNIT 1: RECONNAISSANCE CHALLENGE — HARD
+========================================
+
+TARGET: Nexora - Infrastructure Automation Platform
+OBJECTIVE: Find the hidden flag through multi-step API reconnaissance.
+
+CREDENTIALS:
+  Email: engineer@nexora.dev
+  Password: nexora2025
+
+GETTING STARTED:
+  1. Visit the application and log in with the credentials above.
+  2. This platform has multiple pages — explore all of them.
+  3. Modern APIs expose information in many places: headers, status pages,
+     changelogs, well-known paths, and error messages.
+  4. Information from one endpoint may be needed to access another.
+  5. Pay attention to version strings, custom headers, and any references
+     to internal tooling or endpoints.
+
+TOOLS YOU MAY NEED:
+  - Browser Developer Tools (Network tab, Response headers)
+  - curl (with -v and -H flags)
+  - Ability to chain discoveries: output from step N informs step N+1
+  - Knowledge of .well-known paths and API metadata conventions
+
+NOTE: This challenge requires multiple steps. Each discovery leads to the next.
+      There is no single endpoint you can guess — you must follow the trail.
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

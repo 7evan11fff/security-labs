@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /api/internal/
+Disallow: /api/management/
+Allow: /api/v2/
+Allow: /
