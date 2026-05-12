@@ -1,0 +1,29 @@
+UNIT 4: OAUTH REDIRECT BYPASS — MODERATE
+==========================================
+
+TARGET: AuthBridge - Enterprise SSO Provider
+OBJECTIVE: Bypass redirect_uri validation to steal an OAuth access token.
+
+NO LOGIN REQUIRED — this lab simulates the OAuth provider itself.
+
+GETTING STARTED:
+  1. Visit the application and explore the /login page for API documentation.
+  2. The OAuth flow has three steps: authorize → exchange code → access resource.
+  3. The registered redirect URI prefix is: https://dashboard.authbridge.io
+  4. The validation checks that your redirect_uri "starts with" this prefix.
+  5. Think about how URL structure works — what comes after a domain name?
+  6. Could you craft a URL that passes prefix validation but points elsewhere?
+
+TOOLS YOU MAY NEED:
+  - curl (for all 3 steps of the flow)
+  - Understanding of URL structure (scheme://host:port/path)
+  - Knowledge of how prefix-matching can be tricked with subdomains
+
+THE FULL FLOW:
+  1. GET /api/oauth/authorize?redirect_uri=<YOUR_URL>&client_id=app1
+  2. POST /api/oauth/token with {"code": "<CODE>"}
+  3. GET /api/oauth/protected with Authorization: Bearer <TOKEN>
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

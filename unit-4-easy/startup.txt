@@ -1,0 +1,30 @@
+UNIT 4: OAUTH REDIRECT BYPASS — EASY
+======================================
+
+TARGET: ConnectID - OAuth Identity Provider
+OBJECTIVE: Bypass redirect_uri validation to steal an OAuth access token.
+
+NO LOGIN REQUIRED — this lab simulates the OAuth provider itself.
+
+GETTING STARTED:
+  1. Visit the application. The landing page explains the OAuth flow.
+  2. The authorization endpoint is at /api/oauth/authorize
+  3. It requires redirect_uri and response_type=code parameters.
+  4. The registered redirect URI is: https://app.connectid.local/callback
+  5. Try submitting the flow. Observe how the redirect_uri is validated.
+  6. Think about what "validation" means here — what exactly does it check?
+
+TOOLS YOU MAY NEED:
+  - curl
+  - Browser address bar
+  - Understanding of OAuth 2.0 Authorization Code flow
+  - Creative URL manipulation
+
+THE FULL FLOW:
+  1. Get an auth code from /api/oauth/authorize
+  2. Exchange it at /api/oauth/callback?code=CODE
+  3. Use the token at /api/oauth/userinfo with Bearer auth
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

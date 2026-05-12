@@ -1,0 +1,34 @@
+UNIT 4: OAUTH REDIRECT BYPASS — HARD
+======================================
+
+TARGET: VeriAuth - OAuth Provider with "strict" validation
+OBJECTIVE: Bypass redirect_uri validation to steal an OAuth access token.
+
+NO LOGIN REQUIRED — this lab simulates the OAuth provider itself.
+
+GETTING STARTED:
+  1. Visit the application and explore the /login page for full API docs.
+  2. The OAuth authorize endpoint validates that redirect_uri is on the same
+     origin as the application itself. Simple domain tricks won't work here.
+  3. However, the application has OTHER endpoints besides the OAuth ones...
+  4. What if you could find a way to redirect FROM a valid same-origin URL
+     to an external destination?
+  5. Chaining vulnerabilities is a key technique in real-world exploitation.
+
+TOOLS YOU MAY NEED:
+  - curl (for all steps of the flow)
+  - Understanding of open redirect vulnerabilities
+  - Ability to chain multiple issues together
+  - Knowledge of OAuth redirect_uri attacks
+
+THE FULL FLOW:
+  1. GET /api/oauth/authorize?redirect_uri=<SAME_ORIGIN_URL_THAT_REDIRECTS>
+  2. POST /api/oauth/exchange with {"code": "<CODE>"}
+  3. GET /api/oauth/resource with Authorization: Bearer <TOKEN>
+
+NOTE: Think about what other endpoints exist on this application and whether
+      any of them could help you "escape" the same-origin restriction.
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!
