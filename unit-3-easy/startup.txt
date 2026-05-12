@@ -1,0 +1,29 @@
+UNIT 3: JWT EXPLOITATION — EASY
+=================================
+
+TARGET: PulseBoard - Team Dashboard
+OBJECTIVE: Escalate your privileges to access the admin panel.
+
+CREDENTIALS:
+  Username: user
+  Password: user123
+
+GETTING STARTED:
+  1. Visit the application and log in with the credentials above.
+  2. After login, the app will display your JWT token on the dashboard.
+  3. JWTs have three parts separated by dots: header.payload.signature
+  4. You can decode JWT tokens at jwt.io or with base64 decoding.
+  5. Think about what claims control your access level.
+
+TOOLS YOU MAY NEED:
+  - Browser Developer Tools
+  - jwt.io (online JWT decoder/encoder)
+  - curl with Authorization header
+  - Understanding of JWT structure (header, payload, signature)
+
+NOTE: The admin panel is visible in the navigation. Accessing it with your
+      current token will show an error explaining what's required.
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

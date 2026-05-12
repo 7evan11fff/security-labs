@@ -1,0 +1,32 @@
+UNIT 3: JWT EXPLOITATION — HARD
+=================================
+
+TARGET: SentinelOps - Security Operations Center
+OBJECTIVE: Escalate your privileges to access classified operational secrets.
+
+CREDENTIALS:
+  Username: operator
+  Password: sentinel!ops
+
+GETTING STARTED:
+  1. Visit the application and log in with the credentials above.
+  2. The dashboard shows your session token and current claims.
+  3. Explore the platform's configuration endpoint to understand
+     what restricted endpoints exist and what they require.
+  4. JWT tokens are cryptographically signed. The security of the signature
+     depends entirely on the secret used.
+  5. The platform has noted their secret has been "flagged as weak."
+  6. Multiple claims may need to be modified simultaneously to gain access.
+
+TOOLS YOU MAY NEED:
+  - jwt.io or Python's PyJWT library
+  - curl with custom headers
+  - Understanding of JWT HS256 signing and secret brute-forcing
+  - Attention to error messages (they tell you exactly what's wrong)
+
+NOTE: This challenge requires modifying multiple JWT claims and discovering
+      the signing secret. Error messages are your guide.
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

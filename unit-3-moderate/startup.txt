@@ -1,0 +1,27 @@
+UNIT 3: JWT EXPLOITATION — MODERATE
+=====================================
+
+TARGET: MetricVault - Analytics Engine
+OBJECTIVE: Escalate your privileges to access a restricted admin endpoint.
+
+CREDENTIALS:
+  Email: analyst@metricvault.io
+  Password: metrics2025
+
+GETTING STARTED:
+  1. Visit the application and log in with the credentials above.
+  2. The dashboard shows your session information and JWT token.
+  3. The API will tell you about available endpoints and their requirements.
+  4. Decode your JWT to understand its structure and claims.
+  5. JWT tokens are signed with a secret. If the secret is weak, you can
+     forge your own tokens.
+
+TOOLS YOU MAY NEED:
+  - jwt.io (JWT decoder/encoder)
+  - curl with Authorization: Bearer header
+  - A wordlist of common JWT secrets (or educated guessing)
+  - Knowledge of HS256 signing
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!
