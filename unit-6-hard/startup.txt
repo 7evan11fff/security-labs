@@ -1,0 +1,32 @@
+UNIT 6: SQL INJECTION — HARD
+==============================
+
+TARGET: InvenTrack - Inventory Management System
+OBJECTIVE: Extract the flag from the database using SQL injection.
+
+NO CREDENTIALS PROVIDED — you must bypass authentication first.
+
+GETTING STARTED:
+  1. Visit the application and try to log in.
+  2. Unlike easier versions, this app does NOT show SQL query debug output.
+  3. You must infer what's happening based on success/failure responses.
+  4. The login is still vulnerable to injection — test with special characters.
+  5. After login bypass, the search feature is your extraction point.
+  6. You'll need to determine column count and enumerate tables without
+     seeing the raw SQL query.
+
+TOOLS YOU MAY NEED:
+  - curl (for precise control)
+  - SQL injection methodology without error output
+  - UNION-based extraction techniques
+  - ORDER BY for column enumeration
+
+APPROACH:
+  1. Bypass login (same technique, no debug output to guide you)
+  2. In search: determine column count using ORDER BY N (find where errors start)
+  3. Use UNION SELECT to enumerate table names
+  4. Extract data from the target table
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

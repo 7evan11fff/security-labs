@@ -1,0 +1,28 @@
+UNIT 6: SQL INJECTION — EASY
+==============================
+
+TARGET: ShopDB - Online Marketplace
+OBJECTIVE: Extract the flag from the database using SQL injection.
+
+NO CREDENTIALS PROVIDED — you must bypass authentication first.
+
+GETTING STARTED:
+  1. Visit the application and try to log in.
+  2. The login form shows you the SQL query being executed (debug mode is on).
+  3. Think about how the username and password are inserted into the SQL query.
+  4. What happens if you include a single quote (') in your input?
+  5. After bypassing login, there's a search feature that's also vulnerable.
+  6. The flag is stored in a database table.
+
+TOOLS YOU MAY NEED:
+  - Browser or curl
+  - Understanding of SQL syntax (SELECT, WHERE, UNION, --)
+  - Knowledge of how string concatenation in SQL creates injection points
+
+TWO STAGES:
+  Stage 1: Bypass the login form using SQL injection
+  Stage 2: Use the search feature to extract data from other tables
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

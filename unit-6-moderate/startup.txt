@@ -1,0 +1,32 @@
+UNIT 6: SQL INJECTION — MODERATE
+==================================
+
+TARGET: DataMarket - Enterprise Data Exchange
+OBJECTIVE: Extract the flag from the database using SQL injection.
+
+NO CREDENTIALS PROVIDED — you must bypass authentication first.
+
+GETTING STARTED:
+  1. Visit the application and try to log in.
+  2. Failed login attempts show error details including query fragments.
+  3. The login form concatenates user input directly into SQL queries.
+  4. After bypassing login, use the search feature to extract hidden data.
+  5. You'll need to determine the number of columns before using UNION.
+  6. There are tables beyond the one shown in search results.
+
+TOOLS YOU MAY NEED:
+  - curl (for precise control over input)
+  - Understanding of UNION-based SQL injection
+  - ORDER BY technique for column count detection
+  - Knowledge of information_schema or equivalent
+
+TWO STAGES:
+  Stage 1: Bypass authentication with SQL injection
+  Stage 2: Use UNION injection in search to extract from hidden tables
+
+NOTE: Try ' OR 1=1 -- for login. For UNION, first determine column count,
+      then enumerate tables, then extract the target data.
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!
