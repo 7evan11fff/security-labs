@@ -1,0 +1,29 @@
+UNIT 2: IDOR CHALLENGE — HARD
+==============================
+
+TARGET: VaultDrive - Secure File Storage Platform
+OBJECTIVE: Find the hidden flag by exploiting broken access controls.
+
+CREDENTIALS:
+  Username: dev_riley
+  Password: riley2025!
+
+GETTING STARTED:
+  1. Visit the application and log in with the credentials above.
+  2. This is a file storage platform — explore how files are stored and accessed.
+  3. The app has an API. Use your recon skills from Unit 1 to discover its structure.
+  4. Consider: who else uses this platform? What files might they have?
+  5. Service accounts often have access to sensitive configuration files.
+
+TOOLS YOU MAY NEED:
+  - Browser Developer Tools (Network tab)
+  - curl
+  - Recon skills (robots.txt, API documentation discovery)
+  - Understanding of how REST APIs handle nested resources
+
+NOTE: This challenge requires combining recon skills with access control exploitation.
+      There are 42 user accounts in the system (IDs starting at 1001).
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!

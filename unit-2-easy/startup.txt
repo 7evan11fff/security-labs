@@ -1,0 +1,26 @@
+UNIT 2: IDOR CHALLENGE — EASY
+==============================
+
+TARGET: TaskFlow - Project Management Platform
+OBJECTIVE: Find the hidden flag by exploiting broken access controls.
+
+CREDENTIALS:
+  Email: jordan@taskflow.io
+  Password: jordan123
+
+GETTING STARTED:
+  1. Visit the application and log in with the credentials above.
+  2. Explore your profile page and observe how the app loads your data.
+  3. Use Developer Tools (Network tab) to see what API calls the app makes.
+  4. Think about what would happen if you changed parameters in those API calls.
+
+TOOLS YOU MAY NEED:
+  - Browser Developer Tools (Network tab)
+  - curl
+  - Understanding of how REST APIs use IDs to identify resources
+
+FLAG FORMAT: FLAG{...}
+
+HINT: The organization has 50 user accounts.
+
+Good luck!

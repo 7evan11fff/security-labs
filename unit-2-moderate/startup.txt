@@ -1,0 +1,28 @@
+UNIT 2: IDOR CHALLENGE — MODERATE
+===================================
+
+TARGET: CloudHub - Team Collaboration Platform
+OBJECTIVE: Find the hidden flag by exploiting broken access controls.
+
+CREDENTIALS:
+  Email: taylor@cloudhub.dev
+  Password: cloudpass1
+
+GETTING STARTED:
+  1. Visit the application and log in with the credentials above.
+  2. Explore all available pages — dashboard, profile, team directory.
+  3. Use Developer Tools (Network tab) to observe how the application
+     communicates with its API.
+  4. The team has 42 members. Not all of them are visible in the UI.
+  5. Think about how the API identifies different users.
+
+TOOLS YOU MAY NEED:
+  - Browser Developer Tools (Network tab)
+  - curl
+  - Ability to enumerate and iterate through values
+
+NOTE: User IDs in this app don't start at 1.
+
+FLAG FORMAT: FLAG{...}
+
+Good luck!
